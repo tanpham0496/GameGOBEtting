@@ -1,0 +1,108 @@
+
+@media only screen and (max-width: 1440px) {
+  #body-game {
+    #board_div {
+      #board_div2 {
+        left: 55px !important;
+        .table-infor{
+          .user-infor{
+            margin-bottom: 0;
+            .user-infor-body{
+              height: 87%;
+            }
+          }
+          .table-caculate{
+            .table-caculate-content{
+              height: 88%;
+              .choose-unit{
+                margin-bottom: 8px;
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+        .table-function{
+          .table-notification{
+            top:42%
+          }
+          .table-chat{
+            top: 56%;
+            .table-chat-background{
+              img{
+                width: 100%;
+                height: 350px;
+              }
+            }
+            .table-chat-content{
+              height: 335px;
+              .table-btn-action{
+                height: 45px;
+              }
+              .table-content-chat{
+                height: 210px;
+              }
+              .table-input-chat{
+                height: 63px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1439px) {
+  #body-game {
+    #board_div {
+      #board_div2 {
+        left: 55px !important;
+        .table-infor{
+          .user-infor{
+            margin-bottom: 10px;
+            .user-infor-body{
+              height: 100%;
+            }
+          }
+          .table-caculate{
+            .table-caculate-content{
+              height: 100%;
+              .choose-unit{
+                margin-bottom: 8px;
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+        .table-function{
+          .table-notification{
+            top: 38%;
+          }
+          .table-chat{
+            top: 50%;
+            .table-chat-background{
+             img{
+              width: 100%;
+              height: 100%;
+             }
+            }
+            .table-chat-content{
+              .table-btn-action{
+                height: 60px;
+              }
+              .table-content-chat{
+                height: 270px;
+                width: 94%;
+              }
+              .table-input-chat{
+                height: 63px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,800 @@
+html,
+body {
+  font-family: "gulimche", sans-serif;
+  margin: 0px;
+  font-size: 13px;
+}
+
+table {
+  font-family: "gulimche", sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  -webkit-perspective: 1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  line-height: 0;
+}
+#body-game {
+  background-color: #e5e5e5;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  #top {
+    position: fixed;
+    top: 0;
+    left: 13px;
+  }
+  #board_div {
+    z-index: 110;
+    background-color: white;
+    position: fixed;
+    min-width: 514px;
+    top: 26px;
+    left: 13px;
+    right: 270px;
+    bottom: 39px;
+    #board_div2 {
+      top: 0 !important;
+      left: 250px !important;
+      position: absolute;
+      display: flex;
+      .table-function {
+        width: 250px;
+        margin-top: 15px;
+        position: relative;
+        .table-betting {
+          .table-betting-background {
+            position: absolute;
+          }
+          .table-betting-content {
+            position: absolute;
+            width: 104%;
+            height: auto;
+            .table-betting-header {
+              height: 50px;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+              background-color: #578778;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              h3 {
+                font-size: 25px;
+                font-weight: 500;
+              }
+              color: white;
+            }
+            .table-betting-body {
+              .table-side {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                height: 50px;
+                width: 63%;
+                margin-left: 55px;
+                font-size: 20px;
+                .white {
+                  height: 100%;
+                  border-bottom: 3px solid white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                .black {
+                  height: 100%;
+                  border-bottom: 3px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+              .round {
+                margin-top: 15px;
+                .round-item {
+                  display: flex;
+                  padding: 15px;
+                  .table-r1 {
+                    width: 70%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    .betting-white-r1 {
+                      width: 50%;
+                      height: 35px;
+                      background-color: white;
+                      border-radius: 10px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                    .betting-black-r1 {
+                      width: 50%;
+                      color: white;
+                      height: 35px;
+                      background-color: black;
+                      border-radius: 10px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                  }
+                  .table-r2 {
+                    width: 70%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    .betting-white-r2 {
+                      width: 60%;
+                      height: 35px;
+                      background-color: white;
+                      border-radius: 10px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                    .betting-black-r2 {
+                      width: 40%;
+                      color: white;
+                      height: 35px;
+                      background-color: black;
+                      border-radius: 10px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                  }
+                  .table-r3 {
+                    width: 70%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    .betting-white-r3 {
+                      width: 30%;
+                      height: 35px;
+                      background-color: white;
+                      border-radius: 10px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                    .betting-black-r3 {
+                      width: 70%;
+                      color: white;
+                      height: 35px;
+                      background-color: black;
+                      border-radius: 10px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .table-notification {
+          position: relative;
+          top: 38%;
+          .table-notification-background {
+            position: absolute;
+          }
+          .table-notification-content {
+            position: absolute;
+            color: white;
+            text-align: center;
+            width: 104%;
+            .notification-detail {
+              border-radius: 10px;
+              border: 2px solid white;
+              width: 90%;
+              margin: auto;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+        .table-chat {
+          position: relative;
+          width: 104%;
+          top: 50%;
+
+          .table-chat-background {
+            position: absolute;
+          }
+          .table-chat-content {
+            position: absolute;
+            width: 100%;
+            .table-btn-action {
+              height: 60px;
+              display: grid;
+              grid-template-columns: 50% 50%;
+              align-items: center;
+              text-align: center;
+              border-bottom: 2px solid #578778;
+
+              .btn-action-item {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                  cursor: pointer;
+                }
+                &.active {
+                  background-color: #578778;
+                  border-top-left-radius: 14px;
+                  color: white;
+                }
+              }
+            }
+            .table-content-chat {
+              height: 270px;
+              overflow: auto;
+              overflow-x: hidden;
+              text-align: center;
+              width: 95%;
+              margin: 10px 13px;
+              &::-webkit-scrollbar {
+                width: 5px;
+                background-color: #f5f5f5;
+                border-radius: 10px;
+              }
+              &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background: -webkit-gradient(
+                  linear,
+                  left top,
+                  right top,
+                  from(#fff),
+                  to(#e4e4e4)
+                );
+                background: -webkit-linear-gradient(left, #fff, #e4e4e4);
+                background: linear-gradient(left, #fff, #e4e4e4);
+                border: 1px solid #aaa;
+              }
+              .content-chat {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                .name {
+                  color: orange;
+                  text-align: left;
+                }
+                .content-input {
+                  text-align: left;
+                  word-wrap: break-word;
+                }
+              }
+            }
+            .table-input-chat {
+              height: 66px;
+              display: grid;
+              grid-template-columns: 75% 25%;
+              align-items: center;
+              text-align: center;
+              .input-chat {
+                background-color: white;
+                width: 95%;
+                height: 70%;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                margin: 0 10px;
+                
+                input {
+                  outline: none;
+                  border: none;
+                  width: 80%;
+                  margin: 0 auto;
+                }
+              }
+              img:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .table-infor {
+        .board-game {
+          position: relative;
+
+          .notification {
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 50px;
+            color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .user-infor {
+          border-radius: 17px;
+          margin-bottom: 10px;
+          width: 100%;
+          margin-top: 10px;
+          position: relative;
+          height: 105px;
+          .user-infor-background {
+            position: absolute;
+            width: 98%;
+            img {
+              width: 100%;
+            }
+          }
+          .user-infor-body {
+            position: absolute;
+            display: flex;
+            width: 95%;
+            height: 100%;
+            align-items: center;
+            left: 49%;
+            transform: translate(-50%);
+            .user-infor-body-content {
+              border: 3px solid white;
+              border-radius: 17px;
+              display: grid;
+              align-items: center;
+              width: 100%;
+              margin-right: 10px;
+              grid-template-columns: auto auto auto;
+              text-align: center;
+              height: 75%;
+              .body-item {
+                &__title-name-user {
+                  color: white;
+                  font-size: 15px;
+                  height: 100%;
+                  background-color: #578778;
+                  border-top-left-radius: 17px;
+                  border-bottom: 3px solid white;
+                  border-top: 3px solid white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                &__title-total-money {
+                  color: white;
+                  font-size: 15px;
+                  height: 100%;
+                  background-color: #578778;
+                  border: 3px solid white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                &__title-money-betting {
+                  color: white;
+                  font-size: 15px;
+                  height: 100%;
+                  background-color: #578778;
+                  border-top-right-radius: 17px;
+                  border-bottom: 3px solid white;
+                  border-top: 3px solid white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                &__name-user {
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                &__total-money {
+                  height: 100%;
+                  border-left: 3px solid white;
+                  border-right: 3px solid white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-top: none;
+                }
+                &__money-betting {
+                  height: 100%;
+                  border-top-right-radius: 17px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+          .user-infor-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 100%;
+              border-radius: 12px;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .table-caculate {
+          position: relative;
+          width: 100%;
+          border-radius: 17px;
+          height: 93px;
+
+          .table-caculate-background {
+            position: absolute;
+            width: 98%;
+            img {
+              width: 100%;
+            }
+          }
+          .table-caculate-content {
+            position: absolute;
+            width: 98%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            height: 100%;
+            .choose-unit {
+              text-align: center;
+              display: grid;
+              grid-template-columns: auto auto auto;
+              align-items: center;
+              margin-bottom: 12px;
+              margin-top: 12px;
+              img:hover {
+                cursor: pointer;
+              }
+            }
+            .choose-color {
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              align-items: center;
+              .choose-color-black,
+              .choose-color-white {
+                width: 54px;
+                text-align: center;
+                img {
+                  margin-bottom: 10px;
+                }
+                input {
+                  width: 15px;
+                  height: 15px;
+                }
+              }
+            }
+
+            .input-unit {
+              display: flex;
+              align-items: center;
+              padding-left: 10px;
+              .input-money {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                border-radius: 10px;
+                width: 100%;
+                border: 3px solid white;
+                .input-poit {
+                  // width: 130px;
+                  // height: 54px;
+                  margin-left: 5px;
+                  display: flex;
+                  align-items: center;
+                  margin-right: 15px;
+                  input {
+                    width: 70px;
+                    height: 25px;
+                    margin-left: 5px;
+                    border: none;
+                    outline: none;
+                    font-size: 25px;
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button {
+                      -webkit-appearance: none;
+                      margin: 0;
+                    }
+                  }
+                }
+              }
+              //
+
+              .btn-updown-unit {
+                width: 40px;
+
+                img:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            .btn-confirm {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 90%;
+                border-radius: 13px;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .result {
+          width: 97%;
+          height: 45px;
+          background-color: white;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+#con1 {
+  z-index: 111;
+  position: fixed;
+  bottom: 0;
+  left: 13px;
+  right: 270px;
+  min-width: 514px;
+  background-image: url("../bg1.png");
+  background-repeat: repeat-x;
+}
+
+#con_p {
+  position: fixed;
+  top: 26px;
+  bottom: 0;
+  right: 13px;
+  width: 244px;
+  z-index: 100;
+  min-height: 560px;
+}
+
+#con_p2 {
+  position: absolute;
+  bottom: 115px;
+  left: 0;
+  width: 244px;
+  height: 170px;
+  overflow: hidden;
+}
+
+#con_p3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 244px;
+  //height: 39px;
+}
+
+#ta1 {
+  background-color: white;
+  position: absolute;
+  top: 317px;
+  bottom: 39px;
+  left: 0;
+  width: 239px;
+  min-height: 1px;
+  padding: 5px 0 0 5px;
+  font-size: 12px;
+}
+
+#ta1 > div > a {
+  text-decoration: underline;
+}
+
+#ta2 {
+  background-color: white;
+  width: 244px;
+  height: 156px;
+  margin-top: 5px;
+}
+
+#info {
+  margin-top: 9px;
+  z-index: 120;
+  background-color: #e5e5e5;
+}
+
+#player {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 0 0 30px;
+}
+
+#player_eng {
+  color: white;
+  font-size: 14px;
+  padding: 10px 0 0 0;
+  margin-left: -3px;
+}
+
+.top_border {
+  border-top: 1px solid #949494;
+  border-collapse: collapse;
+}
+
+.bottom_border {
+  border-bottom: 1px solid #949494;
+  border-collapse: collapse;
+}
+
+.board_div {
+  border-top: 1px solid #7c7c7c;
+  border-left: 1px solid #7c7c7c;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+//loading when login page
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6ef488;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #2cbe4e;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
